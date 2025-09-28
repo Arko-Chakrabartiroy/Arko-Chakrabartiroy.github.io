@@ -1,1 +1,133 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    /* Sidebar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #1e1e1e;
+      color: white;
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 8px 12px;
+      width: 100%;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #333;
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 200px;
+      padding: 40px;
+      width: 100%;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      max-width: 800px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      nav a {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <nav>
+    <h1>Your Name</h1>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>This is where you write a short bio or summary. Talk about who you are, what you do, and what you're passionate about.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Showcase your projects here. Include links, descriptions, or images of your work.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <p>Describe your work history, internships, or freelance experience here.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Provide your email, links to social media, or a contact form.</p>
+    </section>
+  </div>
+
+
+</body></html>
