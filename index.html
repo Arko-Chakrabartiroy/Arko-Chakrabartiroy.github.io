@@ -12,7 +12,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      display: flex;
+      display: block; /* normal document flow so header can span full width */
       min-height: 100vh;
       background-color: #f4f4f4;
     }
@@ -21,7 +21,7 @@
     nav {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 0;
       width: 200px;
       height: 100%;
       background-color: #1e1e1e;
@@ -32,9 +32,31 @@
       align-items: center;
     }
 
-    nav h1 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
+    /* Main wrapper leaves room for the right sidebar and centers inner content */
+    .main-wrapper {
+      width: calc(100% - 200px);
+      margin-right: 200px; /* reserve space for sidebar */
+      margin-left: 0;
+    }
+
+    /* Top-centered site title (in normal flow so it scrolls away) */
+    .site-title {
+      position: static;
+      width: 100%;
+      margin: 0;
+      display: block;
+      text-align: center;
+      padding: 20px 16px 8px;
+      background: transparent;
+    }
+
+    .site-title h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      margin: 0;
+      color: #111;
+      letter-spacing: 0.2px;
     }
 
     nav a {
@@ -53,15 +75,39 @@
 
     /* Main Content */
     .content {
-      margin-left: 200px;
+      max-width: 720px; /* narrower reading column like the target site */
+      margin: 0 auto;
       padding: 40px;
       width: 100%;
+      color: #111;
+      line-height: 1.6;
     }
 
     section {
       min-height: 100vh;
       padding: 40px 20px;
       border-bottom: 1px solid #ddd;
+    }
+
+    /* About two-column layout */
+    .about {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+      flex: 0 0 200px;
+    }
+
+    .about-text {
+      flex: 1 1 auto;
     }
 
     section h2 {
@@ -76,7 +122,7 @@
 
     @media (max-width: 768px) {
       nav {
-        position: static;
+  position: static;
         width: 100%;
         height: auto;
         flex-direction: row;
@@ -84,9 +130,26 @@
         justify-content: space-around;
       }
 
+      .main-wrapper {
+        width: 100%;
+        margin-right: 0;
+      }
+
       .content {
-        margin-left: 0;
+        max-width: none;
+        margin: 0;
         padding: 20px;
+      }
+
+      .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 140px;
+        margin-bottom: 12px;
       }
 
       nav a {
@@ -97,9 +160,13 @@
 </head>
 <body>
 
+  <!-- Site title (top center) -->
+  <header class="site-title">
+    <h1>Arko Chakrabartiroy</h1>
+  </header>
+
   <!-- Sidebar -->
   <nav>
-    <h1>Arko Chakrabartiroy</h1>
     <a href="#about">About</a>
     <a href="#resume">Resume</a>
     <a href="#research">Research Papers</a>
@@ -109,30 +176,65 @@
     <a href="#tutoring">Tutoring</a>
     <a href="#chess">Chess</a>
   </nav>
-
   <!-- Main Content -->
   <div class="content">
     <section id="about">
       <h2>About Me</h2>
-      <p>This is where you write a short bio or summary. Talk about who you are, what you do, and what you're passionate about.</p>
+      <div class="about">
+        <img src="profile.jpg" alt="Profile photo" class="profile-img">
+        <div class="about-text">
+          <p>This is where you write a short bio or summary. Talk about who you are, what you do, and what you're passionate about.</p>
+        </div>
+      </div>
     </section>
 
     <section id="resume">
       <h2>Resume</h2>
-      <a href="Arko Resume - September 2025 V3.docx" download><img src="image.png" alt="an image of me murdering my shift keys"></a>
-      <p>Showcase your projects here. Include links, descriptions, or images of your work.</p>
+      <a href="Arko Resume - September 2025 V3.docx" download><img src="image.png"></a>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>Describe your work history, internships, or freelance experience here.</p>
+    <section id="research">
+      <h2>Research</h2>
+      <h3>Chess Paper</h3>
+      <a href="Audio Chess Paper V2 (1)" download><img src="chess_paper.png"></a>
+      <br>
+      <br>
+      <h3>Dropout Analysis Paper</h3>
+      <a href="Developing Optimized ML Models For Timely Prediction and Prevention of College Dropout" download><img src="dropout.png"></a>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Provide your email, links to social media, or a contact form.</p>
+    <section id="apps">
+      <h2>Apps</h2>
+      <p>List apps info here</p>
+    </section>
+
+    <section id="stories">
+      <h2>Stories</h2>
+      <p>List stories info here</p>
+    </section>
+
+    <section id="music">
+      <h2>Music</h2>
+      <h3>Moonlight</h3>
+      <audio controls>
+        <source src="Moonlight - Last (and maybe best).m4a" type="audio/x-m4a">
+        Your browser does not support the audio element.
+      </audio>
+      <h3>Carnegie Hall</h3>
+      <audio controls>
+        <source src="Weill Recital Hall.m4a" type="audio/x-m4a">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+     <section id="tutoring">
+      <h2>Tutoring</h2>
+      <p>List tutoring info here</p>
+    </section>
+
+    <section id="chess">
+      <h2>Chess</h2>
+      <p>List chess info here</p>
     </section>
   </div>
-
-
 </body></html>
