@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apps - Arko Chakrabartiroy</title>
+  <title>Research - Arko Chakrabartiroy</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body { font-family: Arial, sans-serif; display: block; min-height: 100vh; background-color: #fff; }
@@ -43,7 +43,6 @@
     }
     .content { max-width: 1100px; margin: 0 auto; padding: 60px 40px; width: 100%; color: #333; line-height: 1.6; }
     
-    /* About section specific styles */
     .about-container {
       display: flex;
       gap: 40px;
@@ -55,7 +54,7 @@
       flex-wrap: nowrap;
     }
     
-    .profile-image {
+    .page-image {
       width: 300px;
       max-width: 300px;
       flex: 0 0 300px;
@@ -65,34 +64,80 @@
       object-fit: cover;
     }
     
-    .about-text {
+    .page-content {
       flex: 1;
       font-size: 1.05rem;
       line-height: 1.7;
       padding-top: 4px;
     }
     
-    .about-text p {
-      margin-bottom: 1.2rem;
+    section { padding: 40px 20px; border-bottom: 1px solid #ddd; }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #333;
+      font-weight: 400;
+    }
+
+    .subsection-title {
+      font-size: 1.5rem;
+      margin: 2rem 0 1.5rem;
       color: #444;
-    }
-    
-    .quick-links {
-      margin-top: 2.5rem;
-    }
-    
-    .quick-links a {
-      color: #2E7D32;
-      text-decoration: none;
-      margin-right: 2rem;
       font-weight: 500;
-      font-size: 1rem;
     }
-    
-    .quick-links a:hover {
+
+    .paper-entry {
+      margin-bottom: 2rem;
+    }
+
+    .paper-title {
+      display: block;
+      font-size: 1.1rem;
+      color: #800000;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .paper-title:hover {
       text-decoration: underline;
     }
-    @media (max-width: 768px) { nav { position: static; width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; justify-content: space-around; } .main-wrapper { width: 100%; margin-right: 0; } .content { max-width: none; margin: 0; padding: 20px; } nav a { width: auto; } }
+
+    .paper-meta {
+      margin-top: 0.4rem;
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .paper-status {
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+
+    .paper-materials {
+      margin-top: 0.4rem;
+    }
+
+    .paper-materials a {
+      color: #800000;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .paper-materials a:hover {
+      text-decoration: underline;
+    }
+
+    section p { font-size: 1.1rem; max-width: 800px; }
+    @media (max-width: 768px) { 
+      nav { position: static; width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; justify-content: space-around; } 
+      .main-wrapper { width: 100%; margin-right: 0; } 
+      .content { max-width: none; margin: 0; padding: 20px; } 
+      nav a { width: auto; } 
+      .about-container { flex-direction: column; }
+      .page-image { margin: 0 auto; }
+    }
   </style>
 </head>
 <body>
@@ -110,13 +155,32 @@
   <div class="main-wrapper">
     <div class="content">
       <div class="about-container">
-        <img src="profile.png" alt="Arko Chakrabartiroy" class="profile-image">
-        <div class="about-text">
-          <p>I'm a student whose passions span across various fields including programming, music, and chess. I'm dedicated to exploring the intersections of technology, creativity, and strategic thinking.</p>
+        <img src="research.jpg" alt="Research Preview" class="page-image">
+        <div class="page-content">
+          <h2 class="section-title">Research Papers</h2>
           
-          <p>Currently, I'm focusing on research in computer science and artificial intelligence, while maintaining an active presence in the musical and chess communities. My work includes developing innovative applications and conducting research that bridges multiple disciplines.</p>
-          
-          <p>When I'm not coding or researching, you can find me practicing piano or analyzing chess positions. I also dedicate time to tutoring, sharing my knowledge and experience with others.</p>
+          <h3 class="subsection-title">Working Papers</h3>
+
+          <div class="paper-entry">
+            <a href="Developing Optimized ML Models For Timely Prediction and Prevention of College Dropout.pdf" class="paper-title">Developing Optimized ML Models For Timely Prediction and Prevention of College Dropout</a>
+            <div class="paper-meta">
+              <div class="paper-status">Resubmitted, National High School Journal of Science</div>
+              <div class="paper-materials">
+                <a href="dropout.png">Abstract Preprint</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="paper-entry">
+            <a href="Audio Chess Paper V2 (1).pdf" class="paper-title">Audio-Based Chess Move Detection: A Novel Approach to Making Chess More Accessible</a>
+            <div class="paper-meta">
+              <div class="paper-status">Accepted, Curieux Academic Journal</div>
+              <div class="paper-materials">
+                <a href="chess_paper.png">Abstract Preprint</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
