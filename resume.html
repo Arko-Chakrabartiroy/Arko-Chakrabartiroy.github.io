@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apps - Arko Chakrabartiroy</title>
+  <title>Resume - Arko Chakrabartiroy</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body { font-family: Arial, sans-serif; display: block; min-height: 100vh; background-color: #fff; }
@@ -31,7 +31,7 @@
       z-index: 1;
     }
     .site-title h1 { 
-      font-family: Arial, 'Times New Roman', serif; 
+      font-family: Georgia, 'Times New Roman', serif; 
       font-size: 5rem; 
       font-weight: 400; 
       margin: 0; 
@@ -41,9 +41,8 @@
       z-index: 2;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-    .content { max-width: 1600px; margin: 0 auto; padding: 60px 40px; width: 100%; color: #000000; line-height: 1.6; }
+    .content { max-width: 1600px; margin: 0 auto; padding: 60px 40px; width: 100%; color: #333; line-height: 1.6; }
     
-    /* About section specific styles */
     .about-container {
       display: flex;
       gap: 40px;
@@ -53,79 +52,59 @@
       margin: 0 auto;
       justify-content: flex-start;
       flex-wrap: nowrap;
-      font-family: Arial, 'Times New Roman', serif;
     }
     
-    .profile-image {
-      width: 350px;
-      max-width: 350px;
-      flex: 0 0 350px;
+    .page-image {
+      width: 300px;
+      max-width: 300px;
+      flex: 0 0 300px;
       height: auto;
       border-radius: 2px;
       display: block;
       object-fit: cover;
     }
     
-    .about-text {
+    .page-content {
       flex: 1;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.7;
       padding-top: 4px;
     }
     
-    .about-text p {
+    .page-content p {
       margin-bottom: 1.2rem;
-      color: #000000;
+      color: #444;
     }
-    
-    .quick-links {
-      margin-top: 2.5rem;
+
+    .page-content h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1.2rem;
     }
-    
-    .quick-links a {
-      color: #2E7D32;
+
+    .download-button {
+      display: inline-block;
+      background-color: #800000;
+      color: white;
+      padding: 12px 24px;
       text-decoration: none;
-      margin-right: 2rem;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-    
-    .quick-links a:hover {
-      text-decoration: underline;
+      border-radius: 4px;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
     }
 
-    /* Footer links */
-    .footer-links {
-      position: fixed;
-      bottom: 110px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-    }
-
-    .footer-links a {
-      color: #800000;
-      font-size: 2rem;
-      margin: 0 12px;
-      text-decoration: none;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
+    .download-button:hover {
+      background-color: #600000;
     }
 
     @media (max-width: 768px) { 
-      nav { 
-        position: static; 
-        width: 100%; 
-        height: auto; 
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        justify-content: space-around; 
-      } 
+      nav { position: static; width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; justify-content: space-around; } 
       .main-wrapper { width: 100%; margin-right: 0; } 
       .content { max-width: none; margin: 0; padding: 20px; } 
       nav a { width: auto; } 
+      .about-container { flex-direction: column; }
+      .page-image { margin: 0 auto; }
     }
   </style>
 </head>
@@ -144,8 +123,9 @@
   <div class="main-wrapper">
     <div class="content">
       <div class="about-container">
-        <img src="profile.png" alt="Arko Chakrabartiroy" class="profile-image">
-        <div class="about-text">
+        <img src="resume.png" alt="Resume Preview" class="page-image">
+        <div class="page-content">
+          <h2>Resume</h2>
           <p>I'm a senior at Stuyvesant High School. I'm driven by intellectual curiosity and a love for discovery, fascinated by how mathematical thinking can be used to understand complex systems and create real impact.</p>
 
           <p>My research reflects that curiosity. One project used machine learning and statistical modeling to predict college dropout rates, identifying key factors behind student success and helping educators take early action. Another focused on accessibility in chess, where I helped design a computerized system that allows visually impaired players to experience the game independently. I've also worked on gerrymandering research, developing algorithms to show how district boundaries can be redrawn to reduce bias and improve fairness.</p>
@@ -153,14 +133,10 @@
           <p>Outside of research, I find deep satisfaction in teaching and mentoring. I founded a free tutoring platform on Discord that provides pro bono SHSAT preparation for middle school students, and I also tutor math and SAT through Schoolhouse.world. Whether I'm teaching math concepts, preparing students for the SAT, or helping them build confidence, I value seeing curiosity turn into understanding.</p>
 
           <p>When I'm not studying or tutoring, I enjoy playing piano and violin, composing music, practicing Taekwondo, and competing in chess tournaments. As a Teaching Assistant in Taekwondo, I help younger students strengthen their confidence, discipline, and focus, qualities that guide how I approach both learning and life.</p>
+          <a href="Arko Resume - October 2025 V2.docx" download class="download-button">Download Resume</a>
         </div>
       </div>
     </div>
   </div>
-
-  <footer class="footer-links">
-    <a href="Arko Resume - October 2025 V2.docx" download><strong>Resume</strong></a>
-    <a href="mailto:achakrabartiroy@gmail.com"><strong>Email</strong></a>
-  </footer>
 </body>
 </html>

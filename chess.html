@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess - Arko Chakrabartiroy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; display: block; min-height: 100vh; background-color: #fff; }
+    nav { position: fixed; top: 0; right: 0; width: 200px; height: 100%; background-color: #800000; color: white; padding-top: 180px; display: flex; flex-direction: column; align-items: center; }
+    nav a { color: white; text-decoration: none; margin: 10px 0; padding: 8px 12px; width: 100%; text-align: center; transition: background 0.3s; }
+    nav a:hover { background-color: #333; }
+    .main-wrapper { width: calc(100% - 200px); margin-right: 200px; margin-left: 0; }
+    .site-title { 
+      width: 100%; 
+      margin: 0; 
+      display: block; 
+      text-align: center; 
+      padding: 40px 16px; 
+      background: url('starry_night.webp') center/cover;
+      position: relative;
+    }
+    .site-title::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .site-title h1 { 
+      font-family: Georgia, 'Times New Roman', serif; 
+      font-size: 5rem; 
+      font-weight: 400; 
+      margin: 0; 
+      color: #fff; 
+      letter-spacing: 0.2px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .content { max-width: 1100px; margin: 0 auto; padding: 60px 40px; width: 100%; color: #333; line-height: 1.6; }
+    
+    .about-container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-top: 0;
+      max-width: 1000px;
+      margin: 0 auto;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+    
+    .page-image {
+      width: 300px;
+      max-width: 300px;
+      flex: 0 0 300px;
+      height: auto;
+      border-radius: 2px;
+      display: block;
+      object-fit: cover;
+    }
+    
+    .page-content {
+      flex: 1;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      padding-top: 4px;
+    }
+    
+    .page-content p {
+      margin-bottom: 1.2rem;
+      color: #444;
+    }
+
+    .page-content h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 768px) { 
+      nav { position: static; width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; justify-content: space-around; } 
+      .main-wrapper { width: 100%; margin-right: 0; } 
+      .content { max-width: none; margin: 0; padding: 20px; } 
+      nav a { width: auto; } 
+      .about-container { flex-direction: column; }
+      .page-image { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">About</a>
+    <!--<a href="resume.html">Resume</a>-->
+    <a href="research.html">Research Papers</a>
+    <!--<a href="apps.html">Apps</a>-->
+    <a href="stories.html">Stories</a>
+    <a href="music.html">Music</a>
+    <a href="tutoring.html">Tutoring</a>
+    <!--<a href="chess.html">Chess</a>-->
+  </nav>
+  <header class="site-title"><h1>Arko Chakrabartiroy</h1></header>
+  <div class="main-wrapper">
+    <div class="content">
+      <div class="about-container">
+        <img src="chess.jpg" alt="Chess Preview" class="page-image">
+        <div class="page-content">
+          <h2>Chess Research & AI</h2>
+          <p>Welcome to my chess research page where I explore the fascinating intersection of chess and artificial intelligence. My work includes developing innovative approaches to audio-based chess interfaces and studying chess AI systems.</p>
+          <p>You can read my research paper on audio chess interfaces here:</p>
+          <p><a href="Audio Chess Paper V2 (1).pdf" target="_blank" style="color: #800000; text-decoration: none;">Audio Chess Interface Research Paper</a></p>
+          <p>This research explores novel ways to make chess more accessible through audio interfaces, combining traditional chess principles with modern technology.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

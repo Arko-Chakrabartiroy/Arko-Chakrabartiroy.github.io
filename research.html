@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Arko Chakrabartiroy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; display: block; min-height: 100vh; background-color: #fff; }
+    nav { position: fixed; top: 0; right: 0; width: 200px; height: 100%; background-color: #800000; color: white; padding-top: 180px; display: flex; flex-direction: column; align-items: center; }
+    nav a { color: white; text-decoration: none; margin: 10px 0; padding: 8px 12px; width: 100%; text-align: center; transition: background 0.3s; }
+    nav a:hover { background-color: #333; }
+    .main-wrapper { width: calc(100% - 200px); margin-right: 200px; margin-left: 0; }
+    .site-title { 
+      width: 100%; 
+      margin: 0; 
+      display: block; 
+      text-align: center; 
+      padding: 40px 16px; 
+      background: url('starry_night.webp') center/cover;
+      position: relative;
+    }
+    .site-title::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .site-title h1 { 
+      font-family: Georgia, 'Times New Roman', serif; 
+      font-size: 5rem; 
+      font-weight: 400; 
+      margin: 0; 
+      color: #fff; 
+      letter-spacing: 0.2px;
+      position: relative;
+      z-index: 2;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .content { max-width: 1100px; margin: 0 auto; padding: 60px 40px; width: 100%; color: #333; line-height: 1.6; }
+    
+    .about-container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-top: 0;
+      max-width: 1000px;
+      margin: 0 auto;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+    
+    .page-image {
+      width: 350px;
+      max-width: 350px;
+      flex: 0 0 350px;
+      height: auto;
+      border-radius: 2px;
+      display: block;
+      object-fit: cover;
+      margin-left: -250px;
+    }
+    
+    .page-content {
+      flex: 1;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    
+    section { padding: 40px 20px; border-bottom: 1px solid #ddd; }
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 0rem;
+      color: #333;
+      font-weight: 400;
+    }
+
+    .subsection-title {
+      font-size: 1.5rem;
+      margin: 2rem 0 1.5rem;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .paper-entry {
+      margin-bottom: 1.4rem;
+    }
+
+    .paper-title {
+      display: block;
+      font-size: 1.6rem;
+      color: #800000;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .paper-title:hover {
+      text-decoration: underline;
+    }
+
+    .paper-meta {
+      margin-top: 0.4rem;
+      color: #000000;
+      font-size: 1.5rem;
+    }
+
+    .paper-status {
+      margin-bottom: 0.3rem;
+    }
+
+    .paper-materials {
+      margin-top: 0.4rem;
+    }
+
+    .paper-materials a {
+      color: #800000;
+      text-decoration: none;
+      margin-right: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .paper-materials a:hover {
+      text-decoration: underline;
+    }
+
+    section p { font-size: 1.1rem; max-width: 800px; }
+    @media (max-width: 768px) { 
+      nav { position: static; width: 100%; height: auto; flex-direction: row; flex-wrap: wrap; justify-content: space-around; } 
+      .main-wrapper { width: 100%; margin-right: 0; } 
+      .content { max-width: none; margin: 0; padding: 20px; } 
+      nav a { width: auto; } 
+      .about-container { flex-direction: column; }
+      .page-image { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">About</a>
+    <!--<a href="resume.html">Resume</a>-->
+    <a href="research.html">Research Papers</a>
+    <!--<a href="apps.html">Apps</a>-->
+    <!--<a href="stories.html">Stories</a>-->
+    <a href="music.html">Music</a>
+    <a href="tutoring.html">Tutoring</a>
+    <!--<a href="chess.html">Chess</a>-->
+  </nav>
+  <header class="site-title"><h1>Arko Chakrabartiroy</h1></header>
+  <div class="main-wrapper">
+    <div class="content">
+      <div class="about-container">
+        <img src="research.jpg" alt="Research Preview" class="page-image">
+        <div class="page-content">
+          <h2 class="section-title"><strong>Research Papers</strong></h2>
+          <ul>
+          <li>
+          <div class="paper-entry">
+            <a href="Developing Optimized ML Models For Timely Prediction and Prevention of College Dropout.pdf" class="paper-title"><strong>Developing Optimized ML Models For Timely Prediction and Prevention of College Dropout</strong></a>
+            <div class="paper-meta">
+              <div class="paper-status"><em><b>Resubmitted</b>, National High School Journal of Science</em></div>
+              <div class="paper-status">Presented at the <em>Symposium of Rising Scholars</em>, September 2025</div>
+
+              <div class="paper-materials">
+                <a href="dropout.png">Abstract</a>
+                <a href="https://www.preprints.org/manuscript/202509.0703/v1">Preprint</a>
+                <a href="https://docs.google.com/presentation/d/1VtWWcJZGaN-Ruh0JSFcTrVEwE7lpD4-C/edit?slide=id.p1#slide=id.p1">Slides</a>
+              </div>
+            </div>
+          </div>
+          </li>
+          <li>
+          <div class="paper-entry">
+            <a href="https://www.curieuxacademicjournal.com/_files/ugd/99711c_e5d46c1eeb8c4d51b163c7120771a4f1.pdf#page=322" class="paper-title"><strong>Development of a Large Language Model-Based System For Enhanced Access to Chess for Visually Impaired Individuals</strong></a>
+            <div class="paper-meta">
+              <div class="paper-status"><em><b>Published</b>, Curieux Academic Journal,</em> 56 (2), November 2025.</div>
+              <div class="paper-materials">
+                <a href="chess_paper.png">Abstract</a>
+                <a href="https://www.preprints.org/manuscript/202510.0447/v1">Preprint</a>
+              </div>
+            </div>
+          </div>
+          </li>
+          <li>
+          <div class="paper-entry">
+            <a href="https://maximejaccon.github.io/manim_slides/gerrymandering3.html" class="paper-title"><strong>Gerrymandering</strong></a>
+            <div class="paper-meta">
+              <div class="paper-status">Presented at the 2025 "Math in Action" SHAPE Symposium at Columbia University</div>
+              <div class="paper-materials">
+                <a href="https://maximejaccon.github.io/manim_slides/gerrymandering3.html">Slides</a>
+              </div>
+            </div>
+          </div>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
