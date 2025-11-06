@@ -18,7 +18,7 @@
       text-align: center; 
       padding: 40px 16px; 
       background: url('starry_night.webp') center/cover;
-      position: relative;
+      position: fixed;
     }
     .site-title::before {
       content: '';
@@ -64,13 +64,14 @@
       border-radius: 2px;
       display: block;
       object-fit: cover;
+      padding-top: 140px;
     }
     
     .about-text {
       flex: 1;
       font-size: 1.1rem;
       line-height: 1.7;
-      padding-top: 4px;
+      padding-top: 140px;
     }
     
     .about-text p {
@@ -96,11 +97,12 @@
 
     /* Footer links */
     .footer-links {
-      position: fixed;
+      position: relative;
       bottom: 110px;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
+      padding-top: 10%;
     }
 
     .footer-links a {
@@ -132,7 +134,7 @@
 <body>
   <nav>
     <a href="index.html">About</a>
-    <!--<a href="resume.html">Resume</a>-->
+    <a href="Arko Resume - October 2025 V3.pdf" download>Resume</a>
     <a href="research.html">Research Papers</a>
     <!--<a href="apps.html">Apps</a>-->
     <!--<a href="stories.html">Stories</a>-->
@@ -140,7 +142,7 @@
     <a href="tutoring.html">Tutoring</a>
     <!--<a href="chess.html">Chess</a>-->
   </nav>
-  <header class="site-title"><h1>Arko Chakrabartiroy</h1></header>
+  <header class="site-title"><a style="text-decoration: none" href="index.html"><h1>Arko Chakrabartiroy</h1></a></header>
   <div class="main-wrapper">
     <div class="content">
       <div class="about-container">
